@@ -116,13 +116,11 @@ resetBtn.addEventListener('click', () => {
     if (!selectedFigure) return;
     const img = selectedFigure.querySelector('img');
 
-    // Повертаємо до початкових параметрів
     img.style.width = img.dataset.originalWidth + 'px';
     img.style.height = img.dataset.originalHeight + 'px';
     img.style.borderWidth = img.dataset.originalBorder + 'px';
     img.setAttribute('alt', img.dataset.originalAlt);
 
-    // Оновлюємо поля вводу
     widthInput.value = img.dataset.originalWidth;
     heightInput.value = img.dataset.originalHeight;
     borderInput.value = img.dataset.originalBorder;
