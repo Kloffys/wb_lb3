@@ -25,12 +25,6 @@ galleryList.querySelectorAll('figure').forEach(fig => {
 // --- Вибір зображення ---
 galleryList.querySelectorAll('figure').forEach(fig => {
     fig.addEventListener('click', () => selectFigure(fig));
-    fig.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            selectFigure(fig);
-        }
-    });
 });
 
 function selectFigure(fig) {
