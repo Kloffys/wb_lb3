@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Галерея — переміщення та редагування зображень</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Галерея зображень — переміщення та редагування</h1>
+    <div class="layout">
+        <section class="gallery" aria-label="Галерея зображень">
+            <strong>Клікніть на зображення, щоб вибрати його</strong>
+            <div class="list" id="galleryList">
+                <figure tabindex="0">
+                    <img src="images/ягода.jpeg" alt="Ягода" data-width="450" data-height="700" data-border="2" />
+                    <figcaption>Ягода</figcaption>
+                </figure>
+                <figure tabindex="0">
+                    <img src="images/лампа.jpeg" alt="Лампа" data-width="450" data-height="700" data-border="2" />
+                    <figcaption>Лампа</figcaption>
+                </figure>
+                <figure tabindex="0">
+                    <img src="images/Земля.jpeg" alt="Земля" data-width="450" data-height="700" data-border="2" />
+                    <figcaption>Земля</figcaption>
+                </figure>
+                <figure tabindex="0">
+                    <img src="images/пазли.jpeg" alt="Пазли" data-width="450" data-height="700" data-border="2" />
+                    <figcaption>Пазли</figcaption>
+                </figure>
+            </div>
+            <footer>Вибране зображення можна перемістити вгору/вниз або відредагувати його параметри.</footer>
+        </section>
+
+        <aside class="controls" aria-label="Параметри керування">
+            <h2>Керування вибраним зображенням</h2>
+            <div class="row actions">
+                <button id="btnUp" class="btn-ghost" title="Вгору">⬆ Вишe</button>
+                <button id="btnDown" class="btn-ghost" title="Вниз">⬇ Нижче</button>
+                <div class="hint">(Або використайте Ctrl+↑ / Ctrl+↓)</div>
+            </div>
+
+            <div style="height:8px"></div>
+
+            <div class="row">
+                <label for="widthInput">Ширина (px)</label>
+                <input id="widthInput" type="number" min="10" step="1" />
+            </div>
+            <div class="row">
+                <label for="heightInput">Висота (px)</label>
+                <input id="heightInput" type="number" min="10" step="1" />
+            </div>
+            <div class="row">
+                <label for="borderInput">Товщина рамки (px)</label>
+                <input id="borderInput" type="number" min="0" step="1" />
+            </div>
+            <div class="row">
+                <label for="altInput">Альтернативний текст</label>
+                <input id="altInput" type="text" />
+            </div>
+
+            <div class="row actions">
+                <button id="applyBtn" class="btn-primary">Застосувати</button>
+                <button id="resetBtn" class="btn-ghost">Скинути значення</button>
+            </div>
+
+            <hr />
+            <div class="hint">Порада: Клікніть на інше зображення, щоб вибрати його. Після застосування розміри та рамка
+                змінюються тільки для поточного зображення.</div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

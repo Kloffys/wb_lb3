@@ -1,0 +1,136 @@
+body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    padding: 18px;
+    background: #f7f8fa;
+    color: #111;
+}
+
+h1 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.layout {
+    display: flex;
+    gap: 20px;
+}
+
+.gallery {
+    width: 360px;
+    background: white;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(30, 30, 30, 0.06);
+}
+
+.gallery .list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 70vh;
+    overflow: auto;
+    padding-right: 6px;
+}
+
+figure {
+    margin: 0;
+    padding: 6px;
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+figure.selected {
+    outline: 3px solid #2563eb33;
+    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.08);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+}
+
+figcaption {
+    font-size: 13px;
+    color: #333;
+}
+
+/* Панель керування */
+.controls {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 14px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(30, 30, 30, 0.06);
+}
+
+.controls h2 {
+    margin-top: 0;
+    font-size: 16px;
+}
+
+.row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+label {
+    min-width: 110px;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+}
+
+button {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-ghost {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+}
+
+.actions {
+    display: flex;
+    gap: 6px;
+}
+
+.hint {
+    font-size: 13px;
+    color: #555;
+}
+
+footer {
+    margin-top: 14px;
+    font-size: 13px;
+    color: #666;
+}
+
+@media (max-width: 900px) {
+    .layout {
+        flex-direction: column;
+    }
+}
